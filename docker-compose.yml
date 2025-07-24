@@ -1,0 +1,30 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  simplewebapi:
+    image: zennapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - sql
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sql;Database=ZennData;User Id=sa;Password=MyNewPassw0rd!;MultipleActiveResultSets=true;TrustServerCertificate=True;
+    ports:
+      - 5009:5009
+  sql:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    container_name: sql-server-zenn
+    ports: # not actually needed, because the two services are on the same network.
+      - "1433:1433" 
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=MyNewPassw0rd!
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
