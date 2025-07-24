@@ -6,7 +6,7 @@ services:
   simplewebapi:
     image: zennapi
     build:
-      context: .
+      context: ./api
       dockerfile: Dockerfile
     depends_on:
       - sql
