@@ -1,5 +1,5 @@
 # 概要
-Vite(ReactとTypeScript)使用して作成されたフロントエンドと、C#/.NETを
+Vite(ReactとTypeScript)使用して作成されたフロントエンドと、C#/.NETを利用して作成したAPIをDockerで一気に起動できます。
 
 # 詳細
 
