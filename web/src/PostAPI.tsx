@@ -37,14 +37,14 @@ function PostAPI() {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Book title:
+                    本のタイトル:
                     <input type="text" name="title" onChange={handleChange} />
                 </label>
                 <label>
-                    Book author:
+                    本の作者:
                     <input type="text" name="author" onChange={handleChange} />
                 </label>
-                <button type="submit">Add</button>
+                <button type="submit">追加</button>
             </form>
         </div>
     )

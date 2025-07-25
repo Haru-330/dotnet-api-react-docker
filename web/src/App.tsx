@@ -8,8 +8,8 @@ function App() {
     <>
       <GetAPI />
       <PostAPI />
-      <DeleteAPI />
       <PutAPI />
+      <DeleteAPI />
     </>
   )
 }

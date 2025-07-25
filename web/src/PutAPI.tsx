@@ -41,10 +41,10 @@ function PutAPI() {
         <div>
             <div>
                 <form onSubmit={handleSubmit}>
-                    ID:<input type="number" onChange={handleIdChange} value={bookId} />
-                    Title:<input type="text" onChange={handleInput} name="title" />
-                    Author:<input type="text" onChange={handleInput} name="author" />
-                    <button type="submit">Submit</button>
+                    本のID:<input type="number" onChange={handleIdChange} value={bookId} />
+                    本のタイトル:<input type="text" onChange={handleInput} name="title" />
+                    本の作者:<input type="text" onChange={handleInput} name="author" />
+                    <button type="submit">更新</button>
                 </form>
             </div>
         </div>

@@ -19,6 +19,7 @@ function GetAPI() {
 
     return (
         <div>
+            <p>📕本の一覧</p>
             <ul>
                 {
                     posts.map(post =>

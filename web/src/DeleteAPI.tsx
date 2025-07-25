@@ -22,10 +22,10 @@ function DeleteAPI() {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Book ID:
+                    本のID:
                     <input type="text" name="id" onChange={handleChange} />
                 </label>
-                <button type="submit">Delete</button>
+                <button type="submit">削除</button>
             </form>
         </div>
     );
